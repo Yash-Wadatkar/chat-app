@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 SizedBox(height: 30),
                 Text(
-                  'Welcome Back',
+                  'Welcome Back to jungle',
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
