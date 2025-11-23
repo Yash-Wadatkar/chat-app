@@ -1,6 +1,8 @@
 import 'package:chat_app/core/common/custom_button.dart';
 import 'package:chat_app/core/common/custom_text_field.dart';
+import 'package:chat_app/data/services/service_locator.dart';
 import 'package:chat_app/presentation/screens/sign_up_screen/sign_up_screen.dart';
+import 'package:chat_app/router/app_router.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -134,14 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               // Handle sign up navigation
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) {
-                                    return const SignUpScreen();
-                                  },
-                                ),
-                              );
+                              serviceLocator<AppRouter>().push(SignUpScreen());
                             },
                         ),
                       ],
